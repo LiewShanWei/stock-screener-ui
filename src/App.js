@@ -1,10 +1,11 @@
-import './App.css';
+import React, {Fragment} from 'react';
+import Finviz from './components/Finviz';
 
 function App() {
   return (
-    <div>
-
-    </div>
+    <Fragment>
+      <Finviz />
+    </Fragment>
   );
 }
 
