@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import Finviz from './components/Finviz';
+import Finviz from './components/Finviz/Finviz';
 
 function App() {
   return (
