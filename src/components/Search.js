@@ -4,7 +4,7 @@ import makeAnimated from 'react-select/animated';
 import styles from './Search.module.css'
 import { useState } from 'react';
 
-const mockValues = [
+const mockTickers = [
     { value: 'SQ', label: 'SQ' },
     { value: 'AMD', label: 'AMD' },
     { value: 'SOFI', label: 'SOFI' },
@@ -12,15 +12,15 @@ const mockValues = [
 
 const animatedComponents = makeAnimated();
 
-const Search = () => {
+const Search = (props) => {
     const [selectedTickers, setSelectedTickers] = useState([]);
 
-    const onSelectHandler = (options) => {
-        setSelectedTickers(options);
+    const onSelectChangeHandler = (tickers) => {
+        setSelectedTickers(tickers);
     };
 
     const onSearchClickHandler = () => {
-        console.log("Selected: " + selectedTickers)
+        props.onSelect(selectedTickers)
     };
 
     return (
@@ -29,9 +29,9 @@ const Search = () => {
             <Select
                 isMulti
                 name="tickerSelection"
-                options={mockValues}
+                options={mockTickers}
                 components={animatedComponents}
-                onChange={onSelectHandler}
+                onChange={onSelectChangeHandler}
             />
             <button
                 onClick={onSearchClickHandler}>Search</button>

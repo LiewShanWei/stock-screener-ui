@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+import axios from "axios";
 import Table from "../../UI/Table"
 import { incomeStatementColumns } from "./Columns";
 
@@ -45,12 +47,31 @@ const mockData = [
     }
 ]
 
-const IncomeStatementTable = () => {
+const IncomeStatementTable = (props) => {
+    const [data, setData] = useState([])
+   
+    useEffect(() => {
+        const tempData = []
+        for(let i=0; i< props.selectedTickers.length; i++){
+            console.log(props.selectedTickers[i])
+            axios.get("http://localhost:5000/finviz/" + props.selectedTickers[i].value + "/" + props.period + "/" + props.statementType)
+                .then(res => {
+                    tempData.push(res.data)
+                })
+        }
+        setData(tempData)
+    }, [props.selectedTickers])
+
+    useEffect(() => {
+        console.log("Printing [data]")
+        console.log(data)
+    }, [data])
+    
     return (
         <Table 
             title="Income Statement"
             columns={incomeStatementColumns}
-            data={mockData}
+            data={data}
         />
     )
 };

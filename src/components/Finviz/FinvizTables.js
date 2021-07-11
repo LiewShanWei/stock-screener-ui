@@ -1,8 +1,12 @@
 import IncomeStatementTable from "./IncomeStatementTable";
 
-const FinvizTables = () => {
+const FinvizTables = (props) => {
+
     return (
-        <IncomeStatementTable />
+        <IncomeStatementTable 
+            selectedTickers={props.selectedTickers}
+            period="annual"
+            statementType="IncomeStatement"/>
     )
 };
 
