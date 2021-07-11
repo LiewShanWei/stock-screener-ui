@@ -1,9 +1,9 @@
 import IncomeStatementTable from "./IncomeStatementTable";
 
-const Finviz = () => {
+const FinvizTables = () => {
     return (
         <IncomeStatementTable />
     )
 };
 
-export default Finviz;
+export default FinvizTables;

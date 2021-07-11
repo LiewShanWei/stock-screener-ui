@@ -1,10 +1,10 @@
 import React, {Fragment} from 'react';
-import Finviz from './components/Finviz/Finviz';
+import FinvizTables from './components/Finviz/FinvizTables';
 
 function App() {
   return (
     <Fragment>
-      <Finviz />
+      <FinvizTables />
     </Fragment>
   );
 }
