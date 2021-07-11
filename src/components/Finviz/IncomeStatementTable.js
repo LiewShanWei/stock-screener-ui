@@ -1,112 +1,5 @@
 import Table from "../../UI/Table"
-
-const columns = [
-    {
-        name: 'Ticker',
-        selector: 'ticker',
-        sortable: true
-    },
-    {
-        name: 'Period End',
-        selector: 'end_date',
-        sortable: false
-    },
-    {
-        name: 'Period Length',
-        selector: 'period_length',
-        sortable: false
-    },
-    {
-        name: 'Total Revenue',
-        selector: 'total_revenue',
-        sortable: true
-    },
-    {
-        name: 'Cost of Revenue',
-        selector: 'costof_revenue',
-        sortable: true
-    },
-    {
-        name: 'Gross Profit',
-        selector: 'gross_profit',
-        sortable: true
-    },
-    {
-        name: 'Selling/General/Admin',
-        selector: 'selling_general_admin',
-        sortable: true
-    },
-    {
-        name: 'R&D',
-        selector: 'research_development',
-        sortable: true
-    },
-    {
-        name: 'Unusual Expense/Income',
-        selector: 'unusual_exp_inc',
-        sortable: true
-    },
-    {
-        name: 'Total Operating Expense',
-        selector: 'total_operating_expense',
-        sortable: true
-    },
-    {
-        name: 'Operating Income',
-        selector: 'operating_income',
-        sortable: true
-    },
-    {
-        name: 'Interest Income Net',
-        selector: 'interest_income_net',
-        sortable: true
-    },
-    {
-        name: 'Other Income Net',
-        selector: 'other_income_net',
-        sortable: true
-    },
-    {
-        name: 'Net Income before Taxes',
-        selector: 'net_income_before_taxes',
-        sortable: true
-    },
-    {
-        name: 'Provision for Income Taxes',
-        selector: 'provision_income_taxes',
-        sortable: true
-    },
-    {
-        name: 'Net Income',
-        selector: 'net_income',
-        sortable: true
-    },
-    {
-        name: 'Income Avail to Common Excl Extraord',
-        selector: 'income_avail_common_excl_extr',
-        sortable: true
-    },
-    {
-        name: 'Income Avail to Common Incl Extraord',
-        selector: 'income_avail_common_incl_extr',
-        sortable: true
-    },
-    {
-        name: 'Diluted Average Shares',
-        selector: 'diluted_average_shares',
-        sortable: true
-    },
-    {
-        name: 'Diluted EPS Excl Extraord',
-        selector: 'diluted_eps_excl_extr',
-        sortable: true
-    },
-    {
-        name: 'Diluted EPS Incl. Extraord',
-        selector: 'diluted_eps_incl_extr',
-        sortable: true
-    }
-]
+import { incomeStatementColumns } from "./Columns";
 
 const mockData = [
     {
@@ -156,7 +49,7 @@ const IncomeStatementTable = () => {
     return (
         <Table 
             title="Income Statement"
-            columns={columns}
+            columns={incomeStatementColumns}
             data={mockData}
         />
     )
