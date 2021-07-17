@@ -1,12 +1,20 @@
+import React from "react";
+import BalanceSheetTable from "./BalanceSheetTable";
 import IncomeStatementTable from "./IncomeStatementTable";
 
 const FinvizTables = (props) => {
 
     return (
-        <IncomeStatementTable 
-            selectedTickers={props.selectedTickers}
-            period="annual"
-            statementType="IncomeStatement"/>
+        <React.Fragment >
+            <IncomeStatementTable 
+                selectedTickers={props.selectedTickers}
+                period="annual"
+                statementType="IncomeStatement"/>
+            <BalanceSheetTable 
+                selectedTickers={props.selectedTickers}
+                period="annual"
+                statementType="BalanceSheet"/>
+        </React.Fragment>
     )
 };
 

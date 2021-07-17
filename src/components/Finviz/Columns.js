@@ -204,7 +204,7 @@ export const balanceSheetColumns = [
     },
     {
         name: 'Current Port. of LT Debt/Capital Leases',
-        selector: row => row['data']['Current Port. of LT Debt/Capital'][0],
+        selector: row => row['data']['Current Port. of LT Debt/Capital Leases'][0],
         sortable: true
     },
     {
