@@ -7,8 +7,6 @@ const AnnualCashFlowTable = (props) => {
             title="Annual Cash Flow"
             columns={annualCashFlowColumns}
             selectedTickers={props.selectedTickers}
-            period={props.period}
-            statementType={props.statementType}
         />
     );
 };

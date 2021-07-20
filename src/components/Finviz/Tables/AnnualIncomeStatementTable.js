@@ -7,8 +7,6 @@ const AnnualIncomeStatementTable = (props) => {
             title="Annual Income Statement"
             columns={annualIncomeStatementColumns}
             selectedTickers={props.selectedTickers}
-            period={props.period}
-            statementType={props.statementType}
         />
     )
 };

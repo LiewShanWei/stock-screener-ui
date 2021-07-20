@@ -7,8 +7,6 @@ const AnnualBalanceSheetTable = (props) => {
             title="Annual Balance Sheet"
             columns={annualBalanceSheetColumns}
             selectedTickers={props.selectedTickers}
-            period={props.period}
-            statementType={props.statementType}
         />
     );
 };
