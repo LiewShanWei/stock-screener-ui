@@ -1,11 +1,11 @@
-import { cashFlowColumns } from "./Columns";
+import annualBalanceSheetColumns from "./Columns/AnnualBalanceSheetColumns";
 import BaseStatementTable from "./BaseStatementTable";
 
-const CashFlowTable = (props) => {
+const AnnualBalanceSheetTable = (props) => {
     return (
         <BaseStatementTable 
-            title="Cash Flow"
-            columns={cashFlowColumns}
+            title="Annual Balance Sheet"
+            columns={annualBalanceSheetColumns}
             selectedTickers={props.selectedTickers}
             period={props.period}
             statementType={props.statementType}
@@ -13,4 +13,4 @@ const CashFlowTable = (props) => {
     );
 };
 
-export default CashFlowTable;
+export default AnnualBalanceSheetTable
