@@ -1,4 +1,4 @@
-import annualCashFlowColumns from "./Columns/AnnualCashFlowColumns";
+import annualCashFlowColumns from "../Columns/AnnualCashFlowColumns";
 import BaseStatementTable from "./BaseStatementTable";
 
 const AnnualCashFlowTable = (props) => {

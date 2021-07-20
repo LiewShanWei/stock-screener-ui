@@ -1,5 +1,5 @@
 import React, {useState, Fragment} from 'react';
-import FinvizTables from './components/Finviz/FinvizTables';
+import FinvizTableList from './components/Finviz/FinvizTableList';
 import Search from './components/Search';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
     <Fragment>
       <Search
         onSelect={onSelectHandler}/>
-      <FinvizTables 
+      <FinvizTableList 
         selectedTickers={selectedTickers}/>
     </Fragment>
   );

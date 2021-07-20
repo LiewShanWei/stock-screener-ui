@@ -1,4 +1,4 @@
-import annualIncomeStatementColumns from "./Columns/AnnualIncomeStatementColumns";
+import annualIncomeStatementColumns from "../Columns/AnnualIncomeStatementColumns";
 import BaseStatementTable from "./BaseStatementTable";
 
 const AnnualIncomeStatementTable = (props) => {

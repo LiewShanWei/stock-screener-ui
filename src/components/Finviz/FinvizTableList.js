@@ -1,9 +1,9 @@
 import React from "react";
-import AnnualBalanceSheetTable from "./AnnualBalanceSheetTable";
-import AnnualCashFlowTable from "./AnnualCashFlowTable";
-import AnnualIncomeStatementTable from "./AnnualIncomeStatementTable";
+import AnnualBalanceSheetTable from "./Tables/AnnualBalanceSheetTable";
+import AnnualCashFlowTable from "./Tables/AnnualCashFlowTable";
+import AnnualIncomeStatementTable from "./Tables/AnnualIncomeStatementTable";
 
-const FinvizTables = (props) => {
+const FinvizTableList = (props) => {
 
     return (
         <React.Fragment >
@@ -23,4 +23,4 @@ const FinvizTables = (props) => {
     )
 };
 
-export default FinvizTables;
+export default FinvizTableList;
