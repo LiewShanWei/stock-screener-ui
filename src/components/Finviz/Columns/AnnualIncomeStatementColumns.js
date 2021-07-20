@@ -16,7 +16,7 @@ const annualIncomeStatementColumns = [
     },
     {
         name: 'Total Revenue',
-        selector: row => row['annualIncomeStatement']['data']['Period End Date'][0],
+        selector: row => row['annualIncomeStatement']['data']['Total Revenue'][0],
         sortable: true
     },
     {
