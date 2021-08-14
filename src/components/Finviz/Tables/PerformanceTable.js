@@ -4,7 +4,7 @@ import BaseStatementTable from "./BaseStatementTable";
 const PerformanceTable = (props) => {
     return (
         <BaseStatementTable 
-            title="Performance Table"
+            title="Quarterly Performance Table"
             columns={performanceColumns}
             selectedTickers={props.selectedTickers}
         />
