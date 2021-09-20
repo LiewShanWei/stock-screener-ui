@@ -1,5 +1,6 @@
 import React, {useState, Fragment} from 'react';
 import FinvizTableList from './components/Finviz/FinvizTableList';
+import Reddit from './components/reddit/Reddit';
 import Search from './components/Search';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         onSelect={onSelectHandler}/>
       <FinvizTableList 
         selectedTickers={selectedTickers}/>
+      <Reddit />
     </Fragment>
   );
 }
