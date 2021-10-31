@@ -2,13 +2,16 @@ import { Fragment, useState } from "react";
 import axios from "axios";
 
 const RedditMain = () => {
-    const [redditData, setRedditData] = useState();
+    const [tickerLabel, setTickerLabel] = useState([]);
+    const [tickerCount, setTickerCount] = useState([]);
 
     const onCallRedditClickHandler = () => {
-        axios.get("http://localhost:5000/reddit/cache")
+        axios.get("http://localhost:5000/reddit/cache/wordcount")
         .then(res => {
-            setRedditData(res.data);
-            console.log(res);
+            for( const[key,value] of Object.entries(res.data)){
+                setTickerLabel(prevState => [...prevState, key]);
+                setTickerCount(prevState => [...prevState, value]);
+            }
         })
     }
 
