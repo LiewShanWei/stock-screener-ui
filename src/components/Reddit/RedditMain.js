@@ -3,10 +3,12 @@ import axios from "axios";
 import RedditTickerStackedChart from "./RedditTickerStackedChart";
 
 const RedditMain = () => {
-    const [tickerData, setTickerData] = useState([["Tickers","Count"]]);
+    const defaultTickerColumns = ["Tickers","Count"]; 
+    const [tickerData, setTickerData] = useState([defaultTickerColumns]);
     const topTickerCount = 40;
 
     const onCallRedditClickHandler = () => {
+        resetTickerData();
         axios.get("http://localhost:5000/reddit/cache/" + topTickerCount)
         .then(res => {
             for( const[key,value] of Object.entries(res.data)){
@@ -18,10 +20,13 @@ const RedditMain = () => {
     const onCallRedditSyncClickHandler = () => {
         axios.get("http://localhost:5000/reddit")
         .then(res => {
-            setTickerData([["Tickers","Count"]]);
             onCallRedditClickHandler();
         })
     }
+
+    const resetTickerData = () => {
+        setTickerData([defaultTickerColumns]);
+    };
     
     return (
         <Fragment>
