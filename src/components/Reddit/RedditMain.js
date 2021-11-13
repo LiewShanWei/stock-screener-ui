@@ -4,7 +4,7 @@ import RedditTickerStackedChart from "./RedditTickerStackedChart";
 
 const RedditMain = () => {
     const [tickerData, setTickerData] = useState([["Tickers","Count"]]);
-    const topTickerCount = 10;
+    const topTickerCount = 40;
 
     const onCallRedditClickHandler = () => {
         axios.get("http://localhost:5000/reddit/cache/" + topTickerCount)
