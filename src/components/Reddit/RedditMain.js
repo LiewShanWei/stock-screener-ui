@@ -14,10 +14,19 @@ const RedditMain = () => {
             }
         })
     }
+
+    const onCallRedditSyncClickHandler = () => {
+        axios.get("http://localhost:5000/reddit")
+        .then(res => {
+            setTickerData([["Tickers","Count"]]);
+            onCallRedditClickHandler();
+        })
+    }
     
     return (
         <Fragment>
             <button onClick={onCallRedditClickHandler}>Get Cached Reddit submissions</button>
+            <button onClick={onCallRedditSyncClickHandler}> Sync Reddit </button>
             <RedditTickerStackedChart tickerData={tickerData} />
         </Fragment>
     )
