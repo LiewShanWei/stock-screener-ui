@@ -1,7 +1,7 @@
 import Chart from "react-google-charts";
 
 const BarChart = (props) => {
-    const chartType = "BarChart";
+    const chartType = "Bar";
 
     const options = 
     {
