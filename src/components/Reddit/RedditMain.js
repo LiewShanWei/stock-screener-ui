@@ -10,7 +10,7 @@ const RedditMain = () => {
         axios.get("http://localhost:5000/reddit/cache/" + topTickerCount)
         .then(res => {
             for( const[key,value] of Object.entries(res.data)){
-                setTickerData(prevState => [...prevState, [key,value]]);
+                setTickerData(prevState => [...prevState, [value[0],value[1]]]);
             }
         })
     }
