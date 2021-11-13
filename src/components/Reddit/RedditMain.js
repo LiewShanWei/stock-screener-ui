@@ -4,9 +4,10 @@ import axios from "axios";
 const RedditMain = () => {
     const [tickerLabel, setTickerLabel] = useState([]);
     const [tickerCount, setTickerCount] = useState([]);
+    const topTickerCount = 10;
 
     const onCallRedditClickHandler = () => {
-        axios.get("http://localhost:5000/reddit/cache/wordcount")
+        axios.get("http://localhost:5000/reddit/cache/" + topTickerCount)
         .then(res => {
             for( const[key,value] of Object.entries(res.data)){
                 setTickerLabel(prevState => [...prevState, key]);
