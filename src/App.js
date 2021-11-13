@@ -1,4 +1,4 @@
-import React, {useState, Fragment} from 'react';
+import {Fragment} from 'react';
 import RedditMain from './components/Reddit/RedditMain';
 
 function App() {
